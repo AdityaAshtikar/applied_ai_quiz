@@ -37,9 +37,10 @@ def show_options(options):
 
 def take_answer():
     options = options_list[0]
+    option_values = options.values()
     while True:
         option = str(input("Select an Option: \n"))
-        if option != "a" and option != "b" and option != "c" and option != "d":
+        if option not in options:
             print("Invalid option, please try again")
         else:
             return option
